@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="51px" height="93px" viewBox="0 0 51 93" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: sketchtool 52.5 (67469) - http://www.bohemiancoding.com/sketch -->
+    <title>B184903D-BE05-4C98-882D-66296E7BE6D4</title>
+    <desc>Created with sketchtool.</desc>
+    <defs>
+        <polygon id="path-1" points="0 0 49.92 0 49.92 92.16 0 92.16"></polygon>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="00_인트로" transform="translate(-664.000000, -1993.000000)">
+            <g transform="translate(200.000000, 200.000000)" id="sns">
+                <g transform="translate(76.800000, 1747.200000)">
+                    <g id="페이스북">
+                        <g id="Group-5" transform="translate(387.840000, 46.080000)">
+                            <g id="f">
+                                <mask id="mask-2" fill="white">
+                                    <use xlink:href="#path-1"></use>
+                                </mask>
+                                <g id="Clip-2"></g>
+                                <path d="M32.4020967,92.16 L32.4020967,50.1217413 L47.1204106,50.1217413 L49.3239365,33.7383921 L32.4020967,33.7383921 L32.4020967,23.2783476 C32.4020967,18.5349857 33.7758004,15.3026501 40.8708651,15.3026501 L49.92,15.2985828 L49.92,0.645490944 C48.3545379,0.446190022 42.9831784,0 36.7340572,0 C23.6872665,0 14.7556474,7.63485224 14.7556474,21.6562822 L14.7556474,33.7383921 L0,33.7383921 L0,50.1217413 L14.7556474,50.1217413 L14.7556474,92.16 L32.4020967,92.16 Z" id="Fill-1" fill="#FFFFFF" mask="url(#mask-2)"></path>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
