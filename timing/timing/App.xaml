@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Application xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="timing.App">
+    <Application.Resources>
+        <ResourceDictionary>
+            <OnPlatform x:TypeArguments="x:String" x:Key="NanumPen">
+                <On Platform="Android" Value="Fonts/nanum-pen-script-regular.ttf#Nanum Pen" />
+                <On Platform="iOS" Value="Nanum Pen" />
+            </OnPlatform>
+
+            <OnPlatform x:TypeArguments="x:String" x:Key="NotoSansKR-Regular">
+                <On Platform="Android" Value="Fonts/NotoSansCJKkr-Regular.otf#Noto Sans CJK KR Regular" />
+                <On Platform="iOS" Value="NotoSans KR Regular" />
+            </OnPlatform>
+
+            <OnPlatform x:TypeArguments="x:String" x:Key="NotoSansKR-Medium">
+                <On Platform="Android" Value="Fonts/NotoSansCJKkr-Medium.otf#Noto Sans CJK KR Medium" />
+                <On Platform="iOS" Value="NotoSans KR Medium" />
+            </OnPlatform>
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>

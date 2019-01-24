@@ -1,0 +1,144 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:timing"
+             x:Class="timing.MainPage" BackgroundImage="invalid_name.jpg">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <local:FontSizeConverter x:Key="fontSizeConverter" />
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+    <RelativeLayout x:Name="ParentContainer">
+
+        <!--
+        <BoxView
+            RelativeLayout.YConstraint="{ConstraintExpression Property=Height, Factor=.301 }"
+            RelativeLayout.XConstraint="{ConstraintExpression Property=Width, Factor=.259 }"
+            RelativeLayout.HeightConstraint="{ConstraintExpression Property=Height, Factor=.090 }"
+            RelativeLayout.WidthConstraint="{ConstraintExpression Property=Width, Factor=.479 }"
+            BackgroundColor="Black">
+        </BoxView>
+        -->
+
+        <Label Text="매일 무제한 무료 소개팅"
+               FontSize="{Binding Converter={StaticResource fontSizeConverter}, ConverterParameter=18.2}"
+               TextColor="#ffffff"
+               HorizontalTextAlignment="Center"
+               VerticalTextAlignment="Center"
+               RelativeLayout.YConstraint="{ConstraintExpression Property=Height, Factor=.301 }"
+               RelativeLayout.XConstraint="{ConstraintExpression Property=Width, Factor=.259 }"
+               RelativeLayout.HeightConstraint="{ConstraintExpression Property=Height, Factor=.090 }"
+               RelativeLayout.WidthConstraint="{ConstraintExpression Property=Width, Factor=.479 }"  />
+
+        <!--
+        <BoxView
+            RelativeLayout.YConstraint="{ConstraintExpression Property=Height, Factor=.385 }"
+            RelativeLayout.XConstraint="{ConstraintExpression Property=Width, Factor=.262 }"
+            RelativeLayout.HeightConstraint="{ConstraintExpression Property=Height, Factor=.090 }"
+            RelativeLayout.WidthConstraint="{ConstraintExpression Property=Width, Factor=.485 }"
+            BackgroundColor="Black">
+        </BoxView>
+        -->
+
+        <Label Text="타이밍"
+               FontSize="{Binding Converter={StaticResource fontSizeConverter}, ConverterParameter=67.2}"
+               TextColor="#ffffff"
+               VerticalOptions="CenterAndExpand"
+               HorizontalTextAlignment="Center"
+               VerticalTextAlignment="Center"
+               RelativeLayout.YConstraint="{ConstraintExpression Property=Height, Factor=.385 }"
+               RelativeLayout.XConstraint="{ConstraintExpression Property=Width, Factor=.262 }"
+               RelativeLayout.WidthConstraint="{ConstraintExpression Property=Width, Factor=.485 }"  />
+
+        <!-- 페이스북 -->
+        <RelativeLayout
+            RelativeLayout.YConstraint="{ConstraintExpression Property=Height, Factor=.681 }"
+            RelativeLayout.XConstraint="{ConstraintExpression Property=Width, Factor=.053 }"
+            RelativeLayout.HeightConstraint="{ConstraintExpression Property=Height, Factor=.072 }"
+            RelativeLayout.WidthConstraint="{ConstraintExpression Property=Width, Factor=.893 }">
+            <Button
+                BackgroundColor="#1679fb"
+                BorderRadius="0"
+                RelativeLayout.YConstraint="{ConstraintExpression Property=Height, Factor=-.21 }"
+                RelativeLayout.XConstraint="{ConstraintExpression Property=Width, Factor=-.016 }"
+                RelativeLayout.WidthConstraint="{ConstraintExpression Property=Width, Factor=1.031 }">
+            </Button>
+            <Label Text="페이스북으로 시작하기"
+                FontSize="{Binding Converter={StaticResource fontSizeConverter}, ConverterParameter=12.5}"
+                FontFamily="{StaticResource NotoSansKR-Medium}"
+                TextColor="#ffffff"
+                HorizontalTextAlignment="Center"
+                VerticalTextAlignment="Center"
+                Margin="0, -10, 0, 0"
+                RelativeLayout.XConstraint="{ConstraintExpression Property=Width, Factor=.336 }"
+                RelativeLayout.YConstraint="{ConstraintExpression Property=Height, Factor=0 }"
+                RelativeLayout.HeightConstraint="{ConstraintExpression Property=Height, Factor=1 }"
+                RelativeLayout.WidthConstraint="{ConstraintExpression Property=Width, Factor=.366 }"  />
+        </RelativeLayout>
+        <local:VectorIcon
+                WidthRequest="13"
+                HeightRequest="24"
+                Margin="0, -3, 0, 0"
+                RelativeLayout.YConstraint="{ConstraintExpression Property=Height, Factor=.699 }"
+                RelativeLayout.XConstraint="{ConstraintExpression Property=Width, Factor=.323 }">
+            <local:VectorIcon.ResourceId>
+                <OnPlatform x:TypeArguments="x:String" Android="timing.Droid.embeded.f.svg" />
+            </local:VectorIcon.ResourceId>
+        </local:VectorIcon>
+
+        <!-- 더이상 네이버 -->
+        <RelativeLayout
+            RelativeLayout.YConstraint="{ConstraintExpression Property=Height, Factor=.765 }"
+            RelativeLayout.XConstraint="{ConstraintExpression Property=Width, Factor=.053 }"
+            RelativeLayout.HeightConstraint="{ConstraintExpression Property=Height, Factor=.072 }"
+            RelativeLayout.WidthConstraint="{ConstraintExpression Property=Width, Factor=.893 }">
+            <Button
+                BackgroundColor="#26cb08"
+                RelativeLayout.YConstraint="{ConstraintExpression Property=Height, Factor=-.21 }"
+                RelativeLayout.XConstraint="{ConstraintExpression Property=Width, Factor=-.016 }"
+                RelativeLayout.WidthConstraint="{ConstraintExpression Property=Width, Factor=1.031 }">
+            </Button>
+        </RelativeLayout>
+
+        <!-- 카카오톡 -->
+        <RelativeLayout
+            RelativeLayout.YConstraint="{ConstraintExpression Property=Height, Factor=.849 }"
+            RelativeLayout.XConstraint="{ConstraintExpression Property=Width, Factor=.053 }"
+            RelativeLayout.HeightConstraint="{ConstraintExpression Property=Height, Factor=.072 }"
+            RelativeLayout.WidthConstraint="{ConstraintExpression Property=Width, Factor=.893 }">
+            <Button
+                BackgroundColor="#fadc00"
+                RelativeLayout.YConstraint="{ConstraintExpression Property=Height, Factor=-.21 }"
+                RelativeLayout.XConstraint="{ConstraintExpression Property=Width, Factor=-.016 }"
+                RelativeLayout.WidthConstraint="{ConstraintExpression Property=Width, Factor=1.031 }">
+            </Button>
+        </RelativeLayout>
+
+        <!--
+        <BoxView
+            RelativeLayout.YConstraint="{ConstraintExpression Property=Height, Factor=.945 }"
+            RelativeLayout.XConstraint="{ConstraintExpression Property=Width, Factor=.309 }"
+            RelativeLayout.HeightConstraint="{ConstraintExpression Property=Height, Factor=.027 }"
+            RelativeLayout.WidthConstraint="{ConstraintExpression Property=Width, Factor=.409 }"
+            BackgroundColor="Black">
+        </BoxView>
+        -->
+
+        <Label Text="SNS친구들을 만나지 않습니다."
+               VerticalTextAlignment="Center"
+               HorizontalTextAlignment="Center"
+               VerticalOptions="CenterAndExpand"
+               FontSize="{Binding Converter={StaticResource fontSizeConverter}, ConverterParameter=11.5}"
+               FontFamily="{StaticResource NotoSansKR-Regular}"
+               TextColor="#ffffff"
+               RelativeLayout.YConstraint="{ConstraintExpression Property=Height, Factor=.945 }"
+               RelativeLayout.XConstraint="{ConstraintExpression Property=Width, Factor=.309 }"
+               RelativeLayout.WidthConstraint="{ConstraintExpression Property=Width, Factor=.409 }" >
+        </Label>
+
+        <Label Text="{Binding DebugText}" >
+        </Label>
+    </RelativeLayout>
+
+</ContentPage>
