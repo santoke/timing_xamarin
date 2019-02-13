@@ -24,7 +24,9 @@ namespace timing
 #endif
         }
 
+        // TODO :
 #if __ANDROID__
+
         private readonly SKCanvasView _canvasView = new SKCanvasView();
 
         public static readonly BindableProperty IconFilePathProperty = BindableProperty.Create(
@@ -33,6 +35,8 @@ namespace timing
         public VectorIcon()
         {
             Padding = new Thickness(0);
+
+            this.InputTransparent = true;
 
             HasShadow = false;
             BackgroundColor = Color.Transparent;
@@ -70,8 +74,10 @@ namespace timing
                 //float yRatio = info.Height / bounds.Height;
                 //float ratio = Math.Min(xRatio, yRatio);
 
-                float ratio = (float)App.GuideWidth / (float)App.ScreenWidth;
-                canvas.Scale(ratio);
+                float ratio = (float)this.WidthRequest / (float)bounds.Width;
+                canvas.Scale(ratio); // 가이드 비율로
+                ratio = (float)App.GuideWidth / (float)App.ScreenWidth;
+                canvas.Scale(ratio); // 앱 스크린 비율로
 
                 //canvas.Translate(-bounds.MidX, -bounds.MidY);
 
