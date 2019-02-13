@@ -8,6 +8,11 @@ using Android.Widget;
 using Android.OS;
 using Android.Util;
 
+using PCLAppConfig;
+using Microsoft.AppCenter;
+using Microsoft.AppCenter.Analytics;
+using Microsoft.AppCenter.Crashes;
+
 namespace timing.Droid
 {
     [Activity(Label = "timing", Icon = "@mipmap/icon", Theme = "@style/MainTheme", MainLauncher = true, ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
@@ -18,8 +23,6 @@ namespace timing.Droid
             TabLayoutResource = Resource.Layout.Tabbar;
             ToolbarResource = Resource.Layout.Toolbar;
 
-            //Resource.Drawable.f;
-
             base.OnCreate(bundle);
 
             App.ScreenWidth = (int)(Resources.DisplayMetrics.WidthPixels / Resources.DisplayMetrics.Density);
@@ -27,13 +30,10 @@ namespace timing.Droid
             global::Xamarin.Forms.Forms.Init(this, bundle);
 
             LoadApplication(new App());
-        }
-
-
-        private int ConvertPixelsToDp(float pixelValue)
-        {
-            var dp = (int)((pixelValue) / Resources.DisplayMetrics.Density);
-            return dp;
+#if DEBUG
+#else
+            AppCenter.Start(ConfigurationManager.AppSettings["AppCenterAndroid"], typeof(Analytics), typeof(Crashes));
+#endif
         }
     }
 }
