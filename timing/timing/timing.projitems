@@ -10,7 +10,7 @@
   </PropertyGroup>
   <ItemGroup>
     <EmbeddedResource Include="$(MSBuildThisFileDirectory)App.xaml" />
-    <EmbeddedResource Include="$(MSBuildThisFileDirectory)views\MainPage.xaml" />
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)view\MainPage.xaml" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="$(MSBuildThisFileDirectory)App.xaml.cs">
@@ -18,17 +18,19 @@
     </Compile>
     <Compile Include="$(MSBuildThisFileDirectory)FontAttributes.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)VectorIcon.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)views\MainPage.xaml.cs">
+    <Compile Include="$(MSBuildThisFileDirectory)view\MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="$(MSBuildThisFileDirectory)views\" />
+    <Folder Include="$(MSBuildThisFileDirectory)view\" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="$(MSBuildThisFileDirectory)embeded\f.svg" />
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)embeded\facebook.svg" />
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)embeded\kakao.svg" />
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)embeded\naver.svg" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="$(MSBuildThisFileDirectory)embeded\k.svg" />
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)config\Secrets.xml" />
   </ItemGroup>
 </Project>
