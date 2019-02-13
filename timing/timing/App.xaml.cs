@@ -1,8 +1,14 @@
-using System;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
-[assembly: XamlCompilation (XamlCompilationOptions.Compile)]
+using Microsoft.AppCenter;
+using Microsoft.AppCenter.Analytics;
+using Microsoft.AppCenter.Crashes;
+
+using PCLAppConfig;
+using System.Reflection;
+
+[assembly: XamlCompilation(XamlCompilationOptions.Compile)]
 namespace timing
 {
     public partial class App : Application
@@ -14,15 +20,22 @@ namespace timing
 		{
 			InitializeComponent();
 
-			MainPage = new MainPage();
+            Assembly assembly = typeof(App).GetTypeInfo().Assembly;
+            ConfigurationManager.Initialise(assembly.GetManifestResourceStream("timing.Droid.config.Secrets.xml"));
+
+            MainPage = new MainPage();
 		}
 
 		protected override void OnStart ()
 		{
-			// Handle when your app starts
-		}
+#if DEBUG
+#else
+            AppCenter.Start($"ios=AppScrent;android={ConfigurationManager.AppSettings["AppCenterAndroid"]}",
+                typeof(Analytics), typeof(Crashes));
+#endif
+        }
 
-		protected override void OnSleep ()
+        protected override void OnSleep ()
 		{
 			// Handle when your app sleeps
 		}
